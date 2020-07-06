@@ -1,0 +1,6 @@
+:root {
+ --off-white: #F6F6F6;
+}
+header {
+    background-color: var(--off-white);
+}
