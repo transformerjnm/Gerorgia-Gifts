@@ -1,6 +1,122 @@
 :root {
+
  --off-white: #F6F6F6;
+ --accent-color: #ea5e23;
+ --text-color: #0E1116;
+
+ --font-1: .618rem;
+ --font0: 1rem;
+ --font1: 1.618rem;
+ --font2: 2.618rem;
+ --font3: 4.23rem;
+
+ --header-font: 'Rock Salt', cursive;
+ --reading-font: 'Open Sans', sans-serif;
 }
+
+body {
+    font-family: var(--reading-font);
+    color: var(--text-color);
+    font-size: var(--font0);
+}
+
+nav {
+    background-color: var(--off-white);
+    box-shadow: 0 .5rem .5rem  lightgrey;
+}
+
+a, a:visited {
+    color: var(--text-color);
+    transition: all .15s ease-in-out;
+}
+
+a:hover, a:focus {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
 header {
     background-color: var(--off-white);
+    font-size: var(--font1);
+}
+
+h1{
+    font-size: var(--font3);
+}
+
+h2{
+    font-size: var(--font2);
+}
+
+h1,h2 {
+    color: var(--accent-color);
+    font-family: var(--header-font);
+}
+
+.card {
+    height: 350px;
+    width: 80%;
+    margin: auto;
+    border-radius: 1rem;
+    border: 2px solid var(--accent-color);
+}
+
+.card img {
+    height: calc(100% - 3rem);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card-body {
+    height: 3rem;
+}
+
+label {
+    color: var(--accent-color);
+    font-size: var(--font1);
+}
+
+form {
+    background-color: var(--off-white);
+    border-radius: 1rem;
+    max-width: 900px;
+}
+
+#Request {
+    height: 10rem;
+}
+
+form input, form select {
+    border-color: var(--accent-color) !important;
+    transition: all 1s ease-in-out;
+    border-radius: 1rem !important;
+}
+
+form input:focus {
+    
+    transform: scale(1.1);
+    
+}
+
+.btn {
+    background-color: var(--accent-color);
+    color: var(--off-white);
+    transition: all .25s ease-in-out;
+}
+
+.btn:hover, .btn:focus {
+    transform: scale(1.1);
+}
+
+footer {
+ 
+    background-color: var(--off-white);
+    box-shadow: 0 -.5rem .5rem  lightgrey;
+}
+
+.social {
+font-size: var(--font2);
+}
+
+footer nav {
+    box-shadow: none;
 }
