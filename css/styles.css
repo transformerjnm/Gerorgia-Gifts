@@ -40,6 +40,10 @@ header {
     font-size: var(--font1);
 }
 
+header img {
+    max-height: 30vh;
+}
+
 h1{
     font-size: var(--font3);
 }
@@ -53,6 +57,10 @@ h1,h2 {
     font-family: var(--header-font);
 }
 
+p {
+    font-size: var(--font1);
+}
+
 .card {
     height: 350px;
     width: 80%;
@@ -62,7 +70,7 @@ h1,h2 {
 }
 
 .card img {
-    height: calc(100% - 3rem);
+    height: 80%;
     border-radius: 1rem 1rem 0 0;
 }
 
@@ -81,7 +89,7 @@ form {
     max-width: 900px;
 }
 
-#Request {
+#Request, #Help {
     height: 10rem;
 }
 
