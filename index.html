@@ -45,7 +45,7 @@
 
         <div class="row">
 
-            <div class="col-sm-4">
+            <div class="col-sm-4 text-center">
 
                 <img src="images/logo.png" class="img-fluid" alt="Orange Peach logo for Georgia Gifts" >
 
@@ -63,19 +63,19 @@
 
             <div class="col-sm-4 text-center mt-5">
 
-                <span>17 Peachy Ave, Atlanta GA 30589</span>
+                <a href="#"> <address>17 Peachy Ave, Atlanta GA 30589</address> </a>
 
             </div>
 
             <div class="col-sm-4 text-center mt-5">
 
-                <span>770-777-7777</span>
+               <a href="tel:#"> <span>770-777-7777</span> </a>
                 
             </div>
 
             <div class="col-sm-4 text-center mt-5">
 
-                <span>GAGifts@gmail.com</span>
+                <a href="mailto:#"> <span>GAGifts@gmail.com</span> </a>
 
             </div>
 
@@ -83,16 +83,16 @@
             
     </header>
 
-    <main class="container" >
+    <main class="container pb-5" >
 
         <!-- Best Sellers -->
         <section>
 
-            <h2 class="text-center mb-4">Best Sellers</h2>
+            <h2 class="text-center my-5 py-5">Best Sellers</h2>
 
             <div class="row">
 
-                <div class="col-sm-6 col-md-4 mb-5">
+                <div class="col-sm-6 col-md-4 my-5">
 
                     <div class="card">
 
@@ -107,7 +107,7 @@
 
                 </div><!-- col -->
 
-                <div class="col-sm-6 col-md-4 mb-5">
+                <div class="col-sm-6 col-md-4 my-5">
 
                     <div class="card">
 
@@ -122,7 +122,7 @@
 
                 </div><!-- col -->
 
-                <div class="col-sm-6 offset-sm-3 offset-md-0 col-md-4 mb-5">
+                <div class="col-sm-6 offset-sm-3 offset-md-0 col-md-4 my-5">
 
                     <div class="card ">
 
@@ -141,7 +141,7 @@
 
             <div class="row ">
 
-                <div class="col-sm-6 col-md-4 mb-5">
+                <div class="col-sm-6 col-md-4 my-5">
 
                     <div class="card">
 
@@ -156,7 +156,7 @@
 
                 </div><!-- col -->
 
-                <div class="col-sm-6 col-md-4 mb-5">
+                <div class="col-sm-6 col-md-4 my-5">
 
                     <div class="card">
 
@@ -171,7 +171,7 @@
 
                 </div><!-- col -->
 
-                <div class="col-sm-6 col-md-4 mb-5 offset-sm-3 offset-md-0">
+                <div class="col-sm-6 col-md-4 my-5 offset-sm-3 offset-md-0">
 
                     <div class="card ">
 
@@ -192,20 +192,20 @@
         <!-- end of Best Sellers -->
 
         <!-- custom Gift -->
-        <section>
+        <section >
 
-            <h2 class="text-center mb-4">Get a Custom Gift</h2>
+            <h2 class="text-center my-5 py-5">Get a Custom Gift</h2>
 
             <form class="p-5 my-5 mx-auto">
 
                 <label class="mt-4"  for="Name" > Your Name *</label>
-                <input class="form-control mb-4" type="text" name="Name" id="Name">
+                <input class="form-control mb-4" type="text" name="Name" id="Name" required>
 
                 <label class="mt-4" for="Email">Your Email *</label>
-                <input class="form-control mb-4" type="text" name="Email" id="Email">
+                <input class="form-control mb-4" type="text" name="Email" id="Email" required>
 
                 <label class="mt-4"  for="ProductType">Product Type *</label>
-                <select class="form-control custom-select mb-4" name="ProductType" id="ProductType" >
+                <select class="form-control custom-select mb-4" name="ProductType" id="ProductType" required>
 
                     <option value="Shirt">Shirt</option>
                     <option value="Mug">Mug</option>
@@ -213,7 +213,7 @@
                 </select>
 
                 <label class="mt-4"  for="Request">Custom Product Request *</label>
-                <input class="form-control mb-4" type="textarea" name="Request" id="Request" >
+                <input class="form-control mb-4" type="textarea" name="Request" id="Request"  required>
 
                 <button type="submit" class="btn">Submit</button>
 
