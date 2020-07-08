@@ -22,9 +22,7 @@
 
         
             <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#nav" >
-
-                hamburger
-    
+                <i class="fa fa-bars "></i>
             </button>
     
             <div class="collapse navbar-collapse " id="nav">
@@ -94,12 +92,15 @@
 
                 <div class="col-sm-6 col-md-4 my-5">
 
-                    <div class="card">
+                    <div class="card" data-toggle="collapse" data-target="#honey" aria-expanded="false" aria-controls="show description of product" >
 
+                        <h3 class="card-title card-text text-center">$16.00</h3>
                         <img class="card-img-top" src="images/honey.jpg" alt="honey in a mason jar">
-                        <div class="card-body">
 
-                          <p class="card-text text-center">$16.00</p>
+                        <div class="card-body collapse" id="honey">
+
+                              <p>Local wildflower honey in a mason jar.</p>
+                              <button  class="btn addToCart" data-product="honey" >Add to Cart</button>
 
                         </div>
 
@@ -109,27 +110,35 @@
 
                 <div class="col-sm-6 col-md-4 my-5">
 
-                    <div class="card">
+                    <div class="card" data-toggle="collapse" data-target="#masonJar" aria-expanded="false" aria-controls="show description of product" >
 
+                        <h3 class="card-title card-text text-center">$5.00</h3>
                         <img class="card-img-top" src="images/masonjar.jpg" alt="mason jar with liquid spilling">
-                        <div class="card-body">
 
-                          <p class="card-text text-center">$16.00</p>
+                        <div class="card-body collapse" id="masonJar" >
 
+                          <p class="card-text">
+                              Empty Mason Jar perfect for a sweet tea cup!
+                          </p>
+                          <button  class="btn addToCart" data-product="masonJar" >Add to Cart</button>
+                          
                         </div>
 
                     </div>
 
                 </div><!-- col -->
 
-                <div class="col-sm-6 offset-sm-3 offset-md-0 col-md-4 my-5">
+                <div class="col-sm-6 col-md-4 my-5">
 
-                    <div class="card ">
+                    <div class="card" data-toggle="collapse" data-target="#tShirt" aria-expanded="false" aria-controls="show description of product" >
 
-                        <img class="card-img-top" src="images/honey.jpg" alt="honey in a mason jar">
-                        <div class="card-body">
+                        <h3 class="card-title card-text text-center">$10.00</h3>
+                        <img class="card-img-top" src="images/t-shirt.jpg" alt="Authentic white t-shirt.">
 
-                          <p class="card-text text-center">$16.00</p>
+                        <div class="card-body collapse" id="tShirt">
+                
+                              <p>Southern charm white t-shirt for men.</p>
+                              <button  class="btn addToCart" data-product="tShirt" >Add to Cart</button>
 
                         </div>
 
@@ -139,17 +148,19 @@
 
             </div><!-- row -->
 
-            <div class="row ">
+            <div class="row">
 
                 <div class="col-sm-6 col-md-4 my-5">
 
-                    <div class="card">
+                    <div class="card" data-toggle="collapse" data-target="#honey3" aria-expanded="false" aria-controls="show description of product" >
 
+                        <h3 class="card-title card-text text-center">$16.00</h3>
                         <img class="card-img-top" src="images/honey.jpg" alt="honey in a mason jar">
-                        <div class="card-body">
 
-                          <p class="card-text text-center">$16.00</p>
+                        <div class="card-body collapse" id="honey3">
 
+                              <p>Local wildflower honey in a mason jar.</p>
+                            
                         </div>
 
                     </div>
@@ -158,12 +169,16 @@
 
                 <div class="col-sm-6 col-md-4 my-5">
 
-                    <div class="card">
+                    <div class="card" data-toggle="collapse" data-target="#masonJar3" aria-expanded="false" aria-controls="show description of product" >
 
+                        <h3 class="card-title card-text text-center">$16.00</h3>
                         <img class="card-img-top" src="images/masonjar.jpg" alt="mason jar with liquid spilling">
-                        <div class="card-body">
 
-                          <p class="card-text text-center">$16.00</p>
+                        <div class="card-body collapse" id="masonJar3" >
+
+                          <p class="card-text">
+                              Empty Mason Jar perfect for a sweet tea cup!
+                          </p>
 
                         </div>
 
@@ -171,15 +186,17 @@
 
                 </div><!-- col -->
 
-                <div class="col-sm-6 col-md-4 my-5 offset-sm-3 offset-md-0">
+                <div class="col-sm-6 col-md-4 my-5">
 
-                    <div class="card ">
+                    <div class="card" data-toggle="collapse" data-target="#honey4" aria-expanded="false" aria-controls="show description of product" >
 
+                        <h3 class="card-title card-text text-center">$16.00</h3>
                         <img class="card-img-top" src="images/honey.jpg" alt="honey in a mason jar">
-                        <div class="card-body">
 
-                          <p class="card-text text-center">$16.00</p>
-
+                        <div class="card-body collapse" id="honey4">
+                
+                              <p>Local wildflower honey in a mason jar.</p>
+                    
                         </div>
 
                     </div>
@@ -283,6 +300,9 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script src="js/shoppingCart.js"></script>
 
 </body>
 
