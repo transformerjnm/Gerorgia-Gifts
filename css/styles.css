@@ -25,6 +25,11 @@ nav {
     box-shadow: 0 .5rem .5rem  lightgrey;
 }
 
+.fa-shopping-cart{
+    font-size: var(--font1);
+    color: var(--accent-color);
+}
+
 a, a:visited {
     color: var(--text-color);
     transition: all .15s ease-in-out;
