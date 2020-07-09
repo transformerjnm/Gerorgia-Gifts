@@ -1,38 +1,45 @@
 let cartDisplay = document.querySelector('.cartItems');
 let products = document.getElementsByClassName('addToCart');
                 
-var cartItems = [];
-
 //display current items in the cart from session storage
 if ( sessionStorage.getItem('persistentCartItems') && cartDisplay ) {
+    
+    //show all items in cart
+    cartDisplay.innerHTML = JSON.parse( sessionStorage.getItem('persistentCartItems') ); 
 
-    cartDisplay.innerHTML = sessionStorage.getItem('persistentCartItems'); 
+    let total = 0;
+    let allPriceObjects = document.querySelectorAll('.price');
 
+    allPriceObjects.forEach( element => {
+
+        let singlePrice = element.innerHTML;
+        //remove string from prices for math calculating
+        singlePrice = singlePrice.replace('Price: $', '');
+
+        total += parseInt(singlePrice);
+    });
+
+    cartDisplay.innerHTML += '<div class="row mt-5" ><span class=" col-12 text-right"> Total: $' + total + '</span></div>';
+    
 }
 
-
 /* determines the item they are trying to add to the cart and adds the item via html to the session storage */
-let addToCart = ( productName ) => {
+let addToCart = ( productDescription ) => {
+    let cartItems = [];
 
-    console.log("ran")
-    switch (productName ) {
+    if( sessionStorage.getItem('persistentCartItems') ){
 
-        case 'honey': 
-            cartItems += '<span> Price: $16.00 Product: Mason jar of Wildflower honey </span><br>';
-        break;
-
-        case 'masonJar': 
-            cartItems += '<span> Price: $5.00 Product: Empty mason jar cup </span><br>';
-        break;
-
-        case 'tShirt': 
-            cartItems += '<span> Price: $10.00 Product: Southern Charm White T-shirt for men </span><br>';
-        break;
+        cartItems = JSON.parse( sessionStorage.getItem('persistentCartItems') );
 
     }
 
+    let nextCartItemNum = cartItems.length;
+    
+    cartItems[ nextCartItemNum ] = productDescription;
+   
     //update/create the session storage with the cart items
-    sessionStorage.setItem("persistentCartItems", cartItems);
+    //can not store array to session must. convert to json for session storage
+    sessionStorage.setItem("persistentCartItems", JSON.stringify(cartItems) );
     
 }//addToCart()
 
