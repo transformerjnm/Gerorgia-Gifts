@@ -1,15 +1,20 @@
-let cartDisplay = document.getElementsByClassName('cartItems')
+let cartDisplay = document.querySelector('.cartItems');
 let products = document.getElementsByClassName('addToCart');
+                
 var cartItems = [];
 
-console.log(cartDisplay)
-
 //display current items in the cart from session storage
-cartDisplay.innerHTML = sessionStorage.getItem('persistentCartItems');
+if ( sessionStorage.getItem('persistentCartItems') && cartDisplay ) {
 
-/* determines the item they are trying to add to the cart and adds the item via html to the sesson storage */
+    cartDisplay.innerHTML = sessionStorage.getItem('persistentCartItems'); 
+
+}
+
+
+/* determines the item they are trying to add to the cart and adds the item via html to the session storage */
 let addToCart = ( productName ) => {
 
+    console.log("ran")
     switch (productName ) {
 
         case 'honey': 
@@ -29,8 +34,6 @@ let addToCart = ( productName ) => {
     //update/create the session storage with the cart items
     sessionStorage.setItem("persistentCartItems", cartItems);
     
-    console.log(sessionStorage.getItem("persistentCartItems"))
-
 }//addToCart()
 
 //set a click event listener on all products add to cart btn
@@ -41,5 +44,3 @@ for ( let i = 0; i < products.length; i++ ) {
 
 }
 
-//display current items in the cart from session storage
-cartDisplay.innerHTML = sessionStorage.getItem('persistentCartItems');
