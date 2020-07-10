@@ -43,6 +43,13 @@ let addToCart = ( productDescription ) => {
     
 }//addToCart()
 
+let clearCart = () => {
+
+    sessionStorage.setItem("persistentCartItems", '');
+    cartDisplay.innerHTML = '';
+    
+}
+
 //set a click event listener on all products add to cart btn
 for ( let i = 0; i < products.length; i++ ) {
 
