@@ -1,5 +1,6 @@
 let cartDisplay = document.querySelector('.cartItems');
 let products = document.getElementsByClassName('addToCart');
+
                 
 //display current items in the cart from session storage
 if ( sessionStorage.getItem('persistentCartItems') && cartDisplay ) {
@@ -7,6 +8,9 @@ if ( sessionStorage.getItem('persistentCartItems') && cartDisplay ) {
     //show all items in cart
     cartDisplay.innerHTML = JSON.parse( sessionStorage.getItem('persistentCartItems') ); 
 
+
+
+    //calculate and show total for items
     let total = 0;
     let allPriceObjects = document.querySelectorAll('.price');
 
@@ -25,6 +29,7 @@ if ( sessionStorage.getItem('persistentCartItems') && cartDisplay ) {
 
 /* determines the item they are trying to add to the cart and adds the item via html to the session storage */
 let addToCart = ( productDescription ) => {
+
     let cartItems = [];
 
     if( sessionStorage.getItem('persistentCartItems') ){
@@ -58,3 +63,23 @@ for ( let i = 0; i < products.length; i++ ) {
 
 }
 
+    //onclick of x remove single item
+    let removeFromCart = document.querySelectorAll('.fa-times');
+    removeFromCart.forEach( closeX => {
+
+        
+
+        let parentEl = "<div class=\"row\">" + closeX.parentElement.parentElement.innerHTML + "</div>";
+
+        closeX.addEventListener('click', () => {
+
+           
+            let cart = JSON.parse( sessionStorage.getItem('persistentCartItems'));
+            console.log(parentEl)
+            console.log(cart)
+            console.log(cart.indexOf(parentEl));
+
+        });
+        
+
+    })
