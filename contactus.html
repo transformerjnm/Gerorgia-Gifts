@@ -88,25 +88,35 @@
 
         <form class="p-5 my-5 mx-auto">
 
-            <label class="mt-4"  for="Name" > Your Name *</label>
-            <input class="form-control mb-4" type="text" name="Name" id="Name" required>
+            <div class="form-group mb-5">
 
-            <label class="mt-4" for="Email">Your Email *</label>
-            <input class="form-control mb-4" type="text" name="Email" id="Email" required>
+                <h4>Who are you?</h4>
+                <label class="mt-4"  for="Name" > Your Name *</label>
+                <input class="form-control mb-4" type="text" name="Name" id="Name" required>
 
-            <label class="mt-4"  for="Help">How can we help you? *</label>
-            <input class="form-control mb-4" type="textarea" name="Help" id="Help" required>
+                <label class="mt-4" for="Email">Your Email *</label>
+                <input class="form-control mb-4" type="text" name="Email" id="Email" required>
 
-            <label class="mt-4"  for="ProductType">Product Type </label>
-            <select class="form-control custom-select mb-4" name="ProductType" id="ProductType" >
+            </div>
 
-                <option value="Shirt">Shirt</option>
-                <option value="Mug">Mug</option>
+            <div class="form-group mt-5">
 
-            </select>
+                <h4 class="mt-5">What do you need today?</h4>
+                <label class="mt-4"  for="Help">How may we help you? </label>
+                <input class="form-control mb-4" type="textarea" name="Help" id="Help" >
 
-            <label class="mt-4"  for="Request">Custom Product Request </label>
-            <input class="form-control mb-4" type="textarea" name="Request" id="Request" >
+                <label class="mt-4"  for="ProductType">Product Type </label>
+                <select class="form-control custom-select mb-4" name="ProductType" id="ProductType" >
+
+                    <option value="Shirt">Shirt</option>
+                    <option value="Mug">Mug</option>
+
+                </select>
+
+                <label class="mt-4"  for="Request">Custom Product Request </label>
+                <input class="form-control mb-4" type="textarea" name="Request" id="Request" >
+
+            </div>
 
             <button type="submit" class="btn">Submit</button>
 

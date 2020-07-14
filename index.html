@@ -101,7 +101,7 @@
                         <div class="card-body collapse" id="honey">
 
                               <p>Local wildflower honey in a mason jar.</p>
-                              <button  class="btn addToCart" data-product='<div class="row"><span class="col-md-8">Product: Mason jar of Wildflower honey</span><span class="col-md-4 text-right price"> Price: $16.00 <i class="fa fa-times" aria-hidden="true"></i></span></div>'>Add to Cart</button>
+                              <button  class="btn addToCart" data-product='<div class="row"><span class="col-md-8"><i class="fa fa-times mr-3" aria-hidden="true"></i>Product: Mason jar of Wildflower honey</span><span class="col-md-4 text-right price"> Price: $16.00 </span></div>'>Add to Cart</button>
 
                         </div>
 
@@ -121,7 +121,7 @@
                           <p class="card-text">
                               Empty Mason Jar perfect for a sweet tea cup!
                           </p>
-                          <button  class="btn addToCart" data-product='<div class="row"><span class="col-md-8">Product: Empty mason jar cup</span><span class="col-md-4 text-right price">Price: $5.00<i class="fa fa-times" aria-hidden="true"></i></span></div>' >Add to Cart</button>
+                          <button  class="btn addToCart" data-product='<div class="row"><span class="col-md-8"><i class="fa fa-times mr-3" aria-hidden="true"></i>Product: Empty mason jar cup</span><span class="col-md-4 text-right price">Price: $5.00</span></div>' >Add to Cart</button>
                           
                         </div>
 
@@ -139,7 +139,7 @@
                         <div class="card-body collapse" id="tShirt">
                 
                               <p>Southern charm white t-shirt for men.</p>
-                              <button  class="btn addToCart" data-product='<div class="row"><span class="col-md-8">Product: Southern Charm White T-shirt for men </span><span class="col-md-4 text-right price">Price: $10.00<i class="fa fa-times" aria-hidden="true"></i></span></div>' >Add to Cart</button>
+                              <button  class="btn addToCart" data-product='<div class="row"><span class="col-md-8"><i class="fa fa-times mr-3" aria-hidden="true"></i>Product: Southern Charm White T-shirt for men </span><span class="col-md-4 text-right price">Price: $10.00</span></div>' >Add to Cart</button>
 
                         </div>
 
@@ -216,22 +216,33 @@
 
             <form class="p-5 my-5 mx-auto">
 
-                <label class="mt-4"  for="Name" > Your Name *</label>
-                <input class="form-control mb-4" type="text" name="Name" id="Name" required>
+                <div class="form-group mb-5">
 
-                <label class="mt-4" for="Email">Your Email *</label>
-                <input class="form-control mb-4" type="text" name="Email" id="Email" required>
+                    <h4>Who are you?</h4>
+                    <label class="mt-4"  for="Name" > Your Name *</label>
+                    <input class="form-control mb-4" type="text" name="Name" id="Name" required>
+    
+                    <label class="mt-4" for="Email">Your Email *</label>
+                    <input class="form-control mb-4" type="text" name="Email" id="Email" required>
 
-                <label class="mt-4"  for="ProductType">Product Type *</label>
-                <select class="form-control custom-select mb-4" name="ProductType" id="ProductType" required>
+                </div>
 
-                    <option value="Shirt">Shirt</option>
-                    <option value="Mug">Mug</option>
+                <div class="form-group my-5">
 
-                </select>
+                    <h4 class="mt-5">What can we make for you?</h4>
+                    <label class="mt-4"  for="ProductType">Product Type *</label>
+                    <select class="form-control custom-select mb-4" name="ProductType" id="ProductType" required>
 
-                <label class="mt-4"  for="Request">Custom Product Request *</label>
-                <input class="form-control mb-4" type="textarea" name="Request" id="Request"  required>
+                        <option value="Shirt">Shirt</option>
+                        <option value="Mug">Mug</option>
+
+                    </select>
+
+                    <label class="mt-4"  for="Request">Custom Product Request *</label>
+                    <input class="form-control mb-4" type="textarea" name="Request" id="Request"  required>
+
+                </div>
+                
 
                 <button type="submit" class="btn">Submit</button>
 
