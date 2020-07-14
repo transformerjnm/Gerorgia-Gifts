@@ -1,13 +1,18 @@
 let cartDisplay = document.querySelector('.cartItems');
 let addToCartBtn = document.getElementsByClassName('addToCart');
-                
+let payBtn = document.querySelector('.payBtn');
+
 //display current items in the cart from session storage
 let showCart = () => {
 
-    if ( sessionStorage.getItem('persistentCartItems') && cartDisplay ) {
-    
-        //show all items in cart
-        cartDisplay.innerHTML = JSON.parse( sessionStorage.getItem('persistentCartItems') ); 
+    if ( sessionStorage.getItem('persistentCartItems') &&cartDisplay ) {
+        
+        //allow form submission if items in cart
+        payBtn.removeAttribute('disabled');
+        let cartArray = JSON.parse( sessionStorage.getItem('persistentCartItems') ) ;
+        
+        //show all items in cart. converts cart array to string with no commas in between them
+        cartDisplay.innerHTML = '<button class="btn col-3 offset-9 mb-5" onclick="clearCart()">Clear Cart</button>' + cartArray.join(""); 
         
         /*start of calculate and show total for items */
 
@@ -21,6 +26,7 @@ let showCart = () => {
                 singlePrice = singlePrice.replace('Price: $', '');
         
                 total += parseInt(singlePrice);
+                
             });
         
             cartDisplay.innerHTML += '<div class="row mt-5" ><span class=" col-12 text-right"> Total: $' + total + '</span></div>';
@@ -30,7 +36,14 @@ let showCart = () => {
         //setup the ability to remove single items from cart
         removeFromCartSetup();
 
-    }//if( sessionStorage persistentCartItems)
+    }//they have no items in the session storage/ persistentCartItems and their is a cartDisplay(they are on the cart.html)
+    else if (cartDisplay && payBtn) {
+
+        cartDisplay.innerHTML = '<div class="container-fluid mt-5" ><p>Sorry, no items found. Please add some awesome Items to your cart to proceed.</p></div>';
+        //disable submission of form if cart is empty
+        payBtn.setAttribute('disabled', 'disabled');
+
+    }
 
 }//showCart()
 
@@ -60,7 +73,9 @@ let addToCart = ( productDescription ) => {
 let clearCart = () => {
 
     sessionStorage.setItem("persistentCartItems", '');
-    cartDisplay.innerHTML = '';
+    cartDisplay.innerHTML = '<div class="container-fluid mt-5" ><p>Sorry, no items found. Please add some awesome Items to your cart to proceed.</p></div>';
+    //cart is empty disable form submission
+    payBtn.setAttribute('disabled', 'disabled');
     
 }
 
@@ -91,11 +106,20 @@ let removeFromCartSetup = () => {
             //remove from array
             cart.splice(cartIndex, 1);
 
-            //update session value
-            sessionStorage.setItem("persistentCartItems", JSON.stringify(cart) );
+            if(cart.length > 0 ) {
 
-            //update displayed values
-            showCart();
+                //update session value
+                sessionStorage.setItem("persistentCartItems", JSON.stringify(cart) );
+
+                //update displayed values
+                showCart();
+
+            } else {
+
+                clearCart();
+
+            }
+           
         
         });//click event
             

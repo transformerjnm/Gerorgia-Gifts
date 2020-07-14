@@ -62,7 +62,7 @@ h2{
     font-size: var(--font2);
 }
 
-h1,h2 {
+h1, h2, h4 {
     color: var(--accent-color);
     font-family: var(--header-font);
 }
@@ -124,6 +124,10 @@ form input:focus {
 
 .btn:hover, .btn:focus {
     transform: scale(1.1);
+}
+
+.fa-times {
+    color: var( --accent-color );
 }
 
 footer {
