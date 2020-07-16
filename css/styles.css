@@ -30,19 +30,23 @@ nav {
     color: var(--accent-color);
 }
 
-a, a:visited {
+a, a:visited, i {
     color: var(--text-color);
     transition: all .15s ease-in-out;
-}
-
-.fa-bars {
-    font-size: var(--font1);
-    color: var(--accent-color);
 }
 
 a:hover, a:focus {
     color: var(--accent-color);
     transform: scale(1.05);
+}
+
+i:hover, i:focus {
+    transform: scale(1.2);
+}
+
+.fa-bars {
+    font-size: var(--font1);
+    color: var(--accent-color);
 }
 
 header {
@@ -128,6 +132,17 @@ form input:focus {
 
 .fa-times {
     color: var( --accent-color );
+}
+
+.cartItems .row {
+    border-bottom: 2px solid lightgray;
+    padding: 2rem  0;
+}
+
+/*total*/
+.cartItems .row:last-child {
+    
+    border: none;
 }
 
 footer {

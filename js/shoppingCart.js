@@ -25,11 +25,12 @@ let showCart = () => {
                 //remove string from prices for math calculating
                 singlePrice = singlePrice.replace('Price: $', '');
         
-                total += parseInt(singlePrice);
+                total += parseFloat(singlePrice);
                 
             });
         
-            cartDisplay.innerHTML += '<div class="row mt-5" ><span class=" col-12 text-right"> Total: $' + total + '</span></div>';
+            cartDisplay.innerHTML += '<div class="row mt-5" ><span class=" col-12 text-right"> Total: $' + total.toFixed(2) + '</span></div>';
+            cartDisplay.innerHTML += '<div class="row mt-5" ><span class=" col-12 text-right"> Total After Tax(7%): $' + ( total * 1.07 ).toFixed( 2 ) + '</span></div>';
 
         /* end of calculate total */
 
